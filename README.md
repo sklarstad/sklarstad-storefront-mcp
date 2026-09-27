@@ -12,7 +12,7 @@ can add an editable timeline. For documentary, interviews, scripted content, You
 shorts.
 
 > **FirstTake launches no later than October 5, 2026.** Until then the server reports it as
-> pre-launch, with no checkout links. For early access, email **sklarstad@gmail.com**.
+> pre-launch, with no checkout links. For early access, email **support@sklarstad.com**.
 
 ## Tools
 
@@ -46,7 +46,7 @@ network requests, collects nothing, and reports nothing back to Sklarstad.
 
 ## Contact
 
-Questions, early access, or feature requests: **sklarstad@gmail.com**
+Questions, early access, or feature requests: **support@sklarstad.com**
 
 <!-- mcp-name: io.github.sklarstad/sklarstad-storefront -->
 <!-- mcp-name: io.github.emersonsklar/sklarstad-storefront -->
