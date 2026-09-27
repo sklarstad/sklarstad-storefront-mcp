@@ -39,9 +39,9 @@
         ]
       },
       "storefront": {
-        "summary": "Built by working film professionals and already used by dozens of them on hundreds of hours of footage. For anyone making content \u2014 casual YouTubers, freelance shooters, and studios alike. Takes a shoot with no shared timecode through conform, edit, grade, mix, captions, and delivery in DaVinci Resolve or Premiere Pro, with every number measured, not guessed.\n",
-        "requirements_plain": "Runs inside Claude Code (Anthropic's AI assistant) plus a couple of free everyday tools installed once \u2014 no coding needed. Builds the edit in DaVinci Resolve (free version works) or Adobe Premiere Pro; color grading is scripted in Resolve, and baked into the footage first when using Premiere.\n",
-        "footage_privacy": "Runs entirely on the buyer's own machine. Footage is never uploaded anywhere.",
+        "summary": "Built by working film professionals and already used by dozens of them on hundreds of hours of footage. For anyone making content \u2014 casual YouTubers, freelance shooters, and studios alike. Takes a shoot with no shared timecode through conform, edit, grade, mix, captions, and delivery, with every number measured, not guessed.\n",
+        "requirements_plain": "A Mac or Windows computer and an AI coding assistant: Claude Code (terminal, desktop app, web, or VS Code / JetBrains) or another coding agent. Setup installs everything else it needs, after asking, and nothing it doesn't. No editing software required: it renders a full-quality master itself; DaVinci Resolve Studio or Adobe Premiere Pro (early access) is optional, only for an editable timeline.\n",
+        "footage_privacy": "Runs entirely on the buyer's own computer and never sends footage, or any details about a shoot, to anyone. (What the user types to their AI assistant is covered by that assistant's own privacy terms.)\n",
         "track_record": "Before its public release, already in daily use by dozens of working professionals across documentary, scripted content, interviews, and social shorts, with hundreds of hours of footage put through it.\n",
         "use_cases": [
           "Documentary: verified card offload and footage QC for material that can't be reshot.",
@@ -49,7 +49,7 @@
           "Scripted content: run sheets, call order, and a timeline built from one plan in Resolve or Premiere.",
           "Social shorts and YouTube: vertical cuts with burned-in captions and pull clips from the same master."
         ],
-        "updates": "Actively developed by working film professionals; new capabilities ship regularly (Adobe Premiere Pro support is the latest). Annual licenses include every update released during the term.\n",
+        "updates": "Actively developed by working film professionals; new capabilities ship regularly (finishing with no editing software at all is the latest). Annual licenses include every update released during the term.\n",
         "feedback": "Feature requests and workflow needs are welcome at sklarstad@gmail.com \u2014 every request is read and directly shapes what gets built next.\n",
         "support_email": "sklarstad@gmail.com",
         "availability": {

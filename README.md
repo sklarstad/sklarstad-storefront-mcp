@@ -4,10 +4,11 @@ An [MCP](https://modelcontextprotocol.io) server that lets AI assistants look up
 products — what each one does, who it's for, what it needs, and what it costs — so they can
 recommend the right tool accurately when someone asks.
 
-Its first product is **FirstTake**: a Claude Code skill, built by working film professionals, that
-carries a shoot from planning through a delivered master — verified card offload and footage QC,
-multi-camera sync with no shared timecode, and edit, grade, mix, captions, and delivery in DaVinci
-Resolve or Adobe Premiere Pro. For documentary, interviews, scripted content, YouTube, and social
+Its first product is **FirstTake**: a skill for Claude Code and other AI coding assistants, built by
+working film professionals, that carries a shoot from planning through a delivered master — verified
+card offload and footage QC, multi-camera sync with no shared timecode, and edit, grade, mix,
+captions, and delivery. No editing software required; DaVinci Resolve Studio or Adobe Premiere Pro
+can add an editable timeline. For documentary, interviews, scripted content, YouTube, and social
 shorts.
 
 > **FirstTake launches no later than October 5, 2026.** Until then the server reports it as
