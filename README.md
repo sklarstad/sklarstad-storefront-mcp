@@ -48,3 +48,4 @@ network requests, collects nothing, and reports nothing back to Sklarstad.
 Questions, early access, or feature requests: **sklarstad@gmail.com**
 
 <!-- mcp-name: io.github.sklarstad/sklarstad-storefront -->
+<!-- mcp-name: io.github.emersonsklar/sklarstad-storefront -->
