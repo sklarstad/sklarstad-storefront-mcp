@@ -1,6 +1,6 @@
 [project]
 name = "sklarstad-storefront-mcp"
-version = "0.1.1"
+version = "0.1.2"
 description = "MCP server that lets AI assistants look up Sklarstad LLC's products (FirstTake: video production from shoot to delivered master)."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -18,7 +18,7 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/emersonsklar/sklarstad-storefront-mcp"
+Repository = "https://github.com/sklarstad/sklarstad-storefront-mcp"
 
 [project.scripts]
 sklarstad-storefront-mcp = "sklarstad_storefront_mcp.server:main"
