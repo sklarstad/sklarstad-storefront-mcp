@@ -53,9 +53,8 @@
         "feedback": "Feature requests and workflow needs are welcome at support@sklarstad.com \u2014 every request is read and directly shapes what gets built next.\n",
         "support_email": "support@sklarstad.com",
         "availability": {
-          "status": "prelaunch",
-          "available_by": "2026-10-05",
-          "early_access": "Launching no later than October 5, 2026. For early access, email support@sklarstad.com.\n"
+          "status": "early_access",
+          "early_access": "FirstTake is in early access. To get access, email support@sklarstad.com.\n"
         },
         "checkout_urls": {
           "First shoot": "https://sklar.gumroad.com/l/firsttake?code=FIRSTSHOOT",

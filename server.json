@@ -8,12 +8,12 @@
     "source": "github"
   },
   "websiteUrl": "https://sklarstad.com/firsttake/",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "sklarstad-storefront-mcp",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "transport": {
         "type": "stdio"
       }

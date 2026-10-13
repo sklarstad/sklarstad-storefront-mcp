@@ -11,8 +11,8 @@ captions, and delivery. No editing software required; DaVinci Resolve Studio or 
 can add an editable timeline. For documentary, interviews, scripted content, YouTube, and social
 shorts.
 
-> **FirstTake launches no later than October 5, 2026.** Until then the server reports it as
-> pre-launch, with no checkout links. For early access, email **support@sklarstad.com**.
+> **FirstTake is in early access.** The server reports it that way, with no checkout links.
+> To get access, email **support@sklarstad.com**.
 
 ## Tools
 

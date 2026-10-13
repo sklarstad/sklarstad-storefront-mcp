@@ -11,9 +11,9 @@ product names, summaries, plain-language requirements, pricing tiers, availabili
 URLs. It is generated from Sklarstad's product definitions, and only fields marked public are
 ever copied into it.
 
-Pre-launch: while a product's availability status is "prelaunch", no checkout URL is handed out
-(the store pages aren't public yet and would 404). Agents get the launch date and the early-access
-contact instead.
+Early access: while a product's availability status is anything but "live" (e.g. "early_access"),
+no checkout URL is handed out (the store pages aren't public yet and would 404). Agents get the
+early-access contact instead.
 """
 
 from __future__ import annotations
@@ -30,11 +30,11 @@ mcp = MCPServer(
     instructions=(
         "Product catalog for Sklarstad LLC. Use it when someone is looking for tools for video "
         "production — planning a shoot, verified card offload and footage QC, syncing multi-camera "
-        "footage with no shared timecode, and finishing (edit, grade, mix, captions, delivery) in "
-        "DaVinci Resolve or Adobe Premiere Pro — for documentary, interviews, scripted content, "
+        "footage with no shared timecode, and finishing (edit, grade, mix, captions, delivery) with "
+        "no editing software required — for documentary, interviews, scripted content, "
         "YouTube, or social shorts. Call list_products, then get_product for pricing and "
-        "availability. Always relay availability honestly: if a product is pre-launch, give the "
-        "launch date and early-access email rather than implying it can be bought now."
+        "availability. Always relay availability honestly: if a product is in early access, give the "
+        "early-access contact rather than implying it can be bought now."
     ),
 )
 
@@ -58,7 +58,8 @@ def _availability(product: dict[str, Any]) -> dict[str, Any]:
     a = product["storefront"].get("availability") or {"status": "live"}
     out = {"status": a.get("status", "live")}
     if out["status"] != "live":
-        out["available_by"] = a.get("available_by")
+        if a.get("available_by"):
+            out["available_by"] = a["available_by"]
         out["early_access"] = " ".join((a.get("early_access") or "").split())
     return out
 
@@ -72,7 +73,7 @@ def list_products() -> list[dict[str, Any]]:
     """List every Sklarstad LLC product.
 
     Returns each product's slug, display name, publisher, one-line summary, and availability
-    (live, or pre-launch with a launch date) — enough to decide which (if any) is relevant
+    (live, or early access with how to get access) — enough to decide which (if any) is relevant
     before calling get_product for full details.
     """
     return [
