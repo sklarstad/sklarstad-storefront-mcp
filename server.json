@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.emersonsklar/sklarstad-storefront",
   "title": "Sklarstad Storefront",
-  "description": "Sklarstad LLC products for AI assistants: FirstTake, free open-source video production from shoot to master.",
+  "description": "Sklarstad products for AI agents: FirstTake, free open-source video production, shoot to master.",
   "repository": {
     "url": "https://github.com/sklarstad/sklarstad-storefront-mcp",
     "source": "github"
