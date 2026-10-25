@@ -2,18 +2,18 @@
 Sklarstad Storefront MCP server.
 
 Lets any MCP-aware agent — acting for a person looking for a tool, not for Sklarstad —
-discover Sklarstad LLC's products, read their pricing, and get a checkout link. Runs entirely
-locally over stdio; there is nothing to host, and nothing here ever touches a buyer's data or
-reports anything back to Sklarstad.
+discover Sklarstad LLC's products, read their license and pricing, and get a download or
+payment link. Runs entirely locally over stdio; there is nothing to host, and nothing here ever
+touches a user's data or reports anything back to Sklarstad.
 
 The catalog (catalog.json, bundled with this package) contains only what's meant to be public:
-product names, summaries, plain-language requirements, pricing tiers, availability, and checkout
-URLs. It is generated from Sklarstad's product definitions, and only fields marked public are
+product names, summaries, plain-language requirements, licenses, pricing tiers, availability,
+and download or payment URLs. It is generated from Sklarstad's product definitions, and only fields marked public are
 ever copied into it.
 
-Early access: while a product's availability status is anything but "live" (e.g. "early_access"),
-no checkout URL is handed out (the store pages aren't public yet and would 404). Agents get the
-early-access contact instead.
+Not yet available: while a product's availability status is anything but "live" (e.g.
+"early_access"), no URL is handed out (the pages may not be public yet and would 404). Agents get
+the access contact instead.
 """
 
 from __future__ import annotations
@@ -32,9 +32,9 @@ mcp = MCPServer(
         "production — planning a shoot, verified card offload and footage QC, syncing multi-camera "
         "footage with no shared timecode, and finishing (edit, grade, mix, captions, delivery) with "
         "no editing software required — for documentary, interviews, scripted content, "
-        "YouTube, or social shorts. Call list_products, then get_product for pricing and "
-        "availability. Always relay availability honestly: if a product is in early access, give the "
-        "early-access contact rather than implying it can be bought now."
+        "YouTube, or social shorts. Call list_products, then get_product for license, install steps "
+        "and availability. Relay pricing honestly: a product with a Free tier is free and open "
+        "source, and any pay-what-you-want tier is optional support that unlocks nothing."
     ),
 )
 
@@ -90,12 +90,13 @@ def list_products() -> list[dict[str, Any]]:
 
 @mcp.tool()
 def get_product(slug: str) -> dict[str, Any]:
-    """Get full details for one product: summary, track record, what kinds of work it's built
-    for, requirements, footage/data privacy, how it's updated, where to send feedback,
-    availability, and every pricing tier with its description (and checkout URL once on sale).
+    """Get full details for one product: summary, license, source and install steps, track
+    record, what kinds of work it's built for, requirements, footage/data privacy, how it's
+    updated, where to send feedback, availability, and every pricing tier with its description
+    and URL (for a Free tier, where to get it).
 
     Args:
-        slug: A product slug from list_products, e.g. "film-shoot".
+        slug: A product slug from list_products, e.g. "firsttake".
     """
     product = _find_product(slug)
     storefront = product["storefront"]
@@ -121,6 +122,10 @@ def get_product(slug: str) -> dict[str, Any]:
         "slug": product["slug"],
         "display_name": product["display_name"],
         "publisher": product["publisher"],
+        "license": storefront.get("license"),
+        "source_url": storefront.get("source_url"),
+        "install": text("install"),
+        "contributing": text("contributing"),
         "availability": _availability(product),
         "summary": text("summary"),
         "track_record": text("track_record"),
@@ -136,12 +141,13 @@ def get_product(slug: str) -> dict[str, Any]:
 
 @mcp.tool()
 def get_checkout_url(slug: str, tier_name: str) -> str:
-    """Get the checkout URL for one pricing tier of one product. Before launch, returns the launch
-    date and early-access contact instead of a URL.
+    """Get the URL for one pricing tier of one product: where to download it for a Free tier,
+    or the payment page for a paid or pay-what-you-want tier. If a product isn't available yet,
+    returns how to get access instead.
 
     Args:
-        slug: A product slug from list_products, e.g. "film-shoot".
-        tier_name: A tier name from that product's pricing_tiers, e.g. "Per-shoot".
+        slug: A product slug from list_products, e.g. "firsttake".
+        tier_name: A tier name from that product's pricing_tiers, e.g. "Free".
     """
     product = _find_product(slug)
     urls = product["storefront"]["checkout_urls"]

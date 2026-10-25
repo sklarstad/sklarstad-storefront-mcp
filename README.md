@@ -1,7 +1,7 @@
 # Sklarstad Storefront MCP
 
 An [MCP](https://modelcontextprotocol.io) server that lets AI assistants look up **Sklarstad LLC**'s
-products — what each one does, who it's for, what it needs, and what it costs — so they can
+products — what each one does, who it's for, what it needs, and how to get it — so they can
 recommend the right tool accurately when someone asks.
 
 Its first product is **FirstTake**: a skill for Claude Code and other AI coding assistants, built by
@@ -11,16 +11,17 @@ captions, and delivery. No editing software required; DaVinci Resolve Studio or 
 can add an editable timeline. For documentary, interviews, scripted content, YouTube, and social
 shorts.
 
-> **FirstTake is in early access.** The server reports it that way, with no checkout links.
-> To get access, email **support@sklarstad.com**.
+> **FirstTake is free and open source** (Apache 2.0):
+> [github.com/emersonsklar/firsttake](https://github.com/emersonsklar/firsttake). If it's useful, there's
+> an optional [pay-what-you-want](https://sklar.gumroad.com/l/support-firsttake) page.
 
 ## Tools
 
 | Tool | Returns |
 |---|---|
 | `list_products` | Every product: name, one-line summary, availability |
-| `get_product` | Full details for one product: summary, track record, use cases, requirements, privacy, updates, pricing tiers, support email |
-| `get_checkout_url` | The checkout link for one pricing tier — or, before launch, the launch date and early-access contact |
+| `get_product` | Full details for one product: summary, license, source and install steps, track record, use cases, requirements, privacy, updates, pricing tiers, support email |
+| `get_checkout_url` | The link for one pricing tier: where to download it (Free), or the optional payment page |
 
 ## Install
 
@@ -46,7 +47,7 @@ network requests, collects nothing, and reports nothing back to Sklarstad.
 
 ## Contact
 
-Questions, early access, or feature requests: **support@sklarstad.com**
+Questions or feature requests: **support@sklarstad.com**, or a GitHub issue on the product's repo.
 
 <!-- mcp-name: io.github.sklarstad/sklarstad-storefront -->
 <!-- mcp-name: io.github.emersonsklar/sklarstad-storefront -->

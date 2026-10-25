@@ -1,66 +1,52 @@
 {
   "products": [
     {
-      "slug": "film-shoot",
+      "slug": "firsttake",
       "display_name": "FirstTake",
       "publisher": "Sklarstad LLC",
       "pricing": {
         "currency": "USD",
         "tiers": [
           {
-            "name": "First shoot",
-            "description": "Launch promo, first purchase only. One project: prep through delivery of a single shoot. Time-limited \u2014 a discount code, not a standing price.\n",
-            "price": 29,
+            "name": "Free",
+            "description": "Free and open source under the Apache License 2.0 \u2014 every feature, unlimited shoots, any number of computers, personal or client work. Redistributors keep the NOTICE crediting FirstTake by Sklarstad LLC and mark what they changed.\n",
+            "price": 0,
             "interval": "one-time",
-            "seats": 1,
-            "promo": true
+            "seats": "unlimited"
           },
           {
-            "name": "Per-shoot",
-            "description": "One project: prep through delivery of a single shoot. No recurring commitment.",
-            "price": 99,
+            "name": "Pay what you want",
+            "description": "Entirely optional. If FirstTake saved a shoot, chip in any amount ($1 minimum) to support development. It unlocks nothing; everything is already free.\n",
+            "price": 1,
             "interval": "one-time",
-            "seats": 1
-          },
-          {
-            "name": "Creator annual",
-            "description": "Single user, single active install, unlimited shoots. Annual only (no monthly option \u2014 keeps this aligned with real usage instead of a subscription someone forgets to cancel). Includes updates for the term.\n",
-            "price": 599,
-            "interval": "year",
-            "seats": 1
-          },
-          {
-            "name": "Studio annual",
-            "description": "Up to 10 seats within one organization, unlimited shoots. Annual only. Includes updates for the term.\n",
-            "price": 2499,
-            "interval": "year",
-            "seats": 10
+            "seats": "unlimited"
           }
         ]
       },
       "storefront": {
         "summary": "Built by working film professionals and already used by dozens of them on hundreds of hours of footage. For anyone making content \u2014 casual YouTubers, freelance shooters, and studios alike. Takes a shoot with no shared timecode through conform, edit, grade, mix, captions, and delivery, with every number measured, not guessed.\n",
         "requirements_plain": "A Mac or Windows computer and an AI coding assistant: Claude Code (terminal, desktop app, web, or VS Code / JetBrains) or another coding agent. Setup installs everything else it needs, after asking, and nothing it doesn't. No editing software required: it renders a full-quality master itself; DaVinci Resolve Studio or Adobe Premiere Pro (early access) is optional, only for an editable timeline.\n",
-        "footage_privacy": "Runs entirely on the buyer's own computer and never sends footage, or any details about a shoot, to anyone. (What the user types to their AI assistant is covered by that assistant's own privacy terms.)\n",
+        "footage_privacy": "Runs entirely on the user's own computer and never sends footage, or any details about a shoot, to anyone. (What the user types to their AI assistant is covered by that assistant's own privacy terms.)\n",
         "track_record": "Before its public release, already in daily use by dozens of working professionals across documentary, scripted content, interviews, and social shorts, with hundreds of hours of footage put through it.\n",
         "use_cases": [
           "Documentary: verified card offload and footage QC for material that can't be reshot.",
           "Interviews: multi-camera sync with no shared timecode, per-speaker audio, word-level speaker attribution.",
-          "Scripted content: run sheets, call order, and a timeline built from one plan in Resolve or Premiere.",
+          "Scripted content: run sheets, call order, and a timeline built from one plan \u2014 rendered with ffmpeg, or as an editable Resolve or Premiere timeline.",
           "Social shorts and YouTube: vertical cuts with burned-in captions and pull clips from the same master."
         ],
-        "updates": "Actively developed by working film professionals; new capabilities ship regularly (finishing with no editing software at all is the latest). Annual licenses include every update released during the term.\n",
-        "feedback": "Feature requests and workflow needs are welcome at support@sklarstad.com \u2014 every request is read and directly shapes what gets built next.\n",
+        "updates": "Actively developed by working film professionals; new capabilities ship regularly (finishing with no editing software at all is the latest). Every update is free: pull the latest from GitHub.\n",
+        "license": "Apache-2.0",
+        "source_url": "https://github.com/emersonsklar/firsttake",
+        "install": "Download or clone https://github.com/emersonsklar/firsttake, open the folder in Claude Code (or another AI coding assistant) and say \"set this up for me\" \u2014 it follows SETUP-FOR-CLAUDE.md, asks before installing anything, and finishes with a one-minute practice run. By hand: git clone https://github.com/emersonsklar/firsttake ~/.claude/skills/firsttake, then python3 scripts/doctor.py.\n",
+        "contributing": "Contributions are welcome: issues and pull requests on GitHub, especially quiet failures from real shoots and gear it doesn't handle yet. See CONTRIBUTING.md.\n",
+        "feedback": "Feature requests and workflow needs are welcome as GitHub issues or at support@sklarstad.com \u2014 every request is read and directly shapes what gets built next.\n",
         "support_email": "support@sklarstad.com",
         "availability": {
-          "status": "early_access",
-          "early_access": "FirstTake is in early access. To get access, email support@sklarstad.com.\n"
+          "status": "live"
         },
         "checkout_urls": {
-          "First shoot": "https://sklar.gumroad.com/l/firsttake?code=FIRSTSHOOT",
-          "Per-shoot": "https://sklar.gumroad.com/l/firsttake",
-          "Creator annual": "https://sklar.gumroad.com/l/firsttake-annual",
-          "Studio annual": "https://sklar.gumroad.com/l/firsttake-annual"
+          "Free": "https://github.com/emersonsklar/firsttake",
+          "Pay what you want": "https://sklar.gumroad.com/l/support-firsttake"
         }
       }
     }

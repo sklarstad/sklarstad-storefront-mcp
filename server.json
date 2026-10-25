@@ -2,18 +2,18 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.emersonsklar/sklarstad-storefront",
   "title": "Sklarstad Storefront",
-  "description": "Sklarstad LLC's products for AI assistants: FirstTake, video production from shoot to master.",
+  "description": "Sklarstad LLC products for AI assistants: FirstTake, free open-source video production from shoot to master.",
   "repository": {
     "url": "https://github.com/sklarstad/sklarstad-storefront-mcp",
     "source": "github"
   },
   "websiteUrl": "https://sklarstad.com/firsttake/",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "sklarstad-storefront-mcp",
-      "version": "0.1.6",
+      "version": "0.2.0",
       "transport": {
         "type": "stdio"
       }
